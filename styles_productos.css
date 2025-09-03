@@ -19,3 +19,11 @@ body{
 
 
 }
+
+.area_carrito{
+
+    background-color: #ff5722; /* Naranja personalizado */
+  border-color: #000000;
+    text-align: center;
+
+}
