@@ -62,19 +62,32 @@
             <div class="col d-flex justify-content-center align-items-center gap-2">
                 <span>Filtrar por:</span>
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button  id="categoria" class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                         Seleccionar categoría
                     </button>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Precio</a></li>
-                        <li><a class="dropdown-item" href="#">Más vendidos</a></li>
-                        <li><a class="dropdown-item" href="#">Destacados</a></li>
+                        <li><a class="dropdown-item" href="#" onclick="cambiarTextoDropdown('Precio')">Precio</a></li>
+                        <li><a class="dropdown-item" href="#"onclick="cambiarTextoDropdown('Mas vendidos')"> Más vendidos </a></li>
+                        <li><a class="dropdown-item" href="#" onclick="cambiarTextoDropdown('Destacados')">Destacados</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+
+<script>
+  function cambiarTextoDropdown(titulo){
+
+    //cambia el nombre por el del boton seleccionado 
+    //usar onclick y pasar un char 'ejemplo'
+    let tituloSeleccionado = "Seleccionar categoría"
+    document.getElementById("categoria").innerHTML = titulo
+    
+  }
+</script>
+
 
 
     <div class="row d-flex justify-content-center mb-6">
