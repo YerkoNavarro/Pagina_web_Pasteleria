@@ -66,32 +66,47 @@
     </div>
 
 
-    <div class="area_del_formualario container formulario de envio mb-5 w-50 mt-4">
 
-        <div class="mb-3 ">
-            <label for="exampleFormControlInput1" class="form-label">Correo Electronico</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        <div class="mb-3 ">
-            <label for="exampleFormControlInput1" class="form-label">Numero de Telefono</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
+<div id="formulario" class="area_del_formulario container mb-5 w-50 mt-4">
+  <div class="mb-3">
+    <label for="campoEmail" class="form-label">Correo Electrónico</label>
+    <input type="email" class="form-control" id="campoEmail" placeholder="name@example.com">
+  </div>
 
-         <div class="mb-3 ">
-            <label for="exampleFormControlInput1" class="form-label">Direccion</label>
-            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-        </div>
-        
-        
-        <div class="mb-3 ">
-            <label for="exampleFormControlTextarea1" class="form-label">Información adicional de envio (Opcional)</label>
-            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        </div>
+  <div class="mb-3">
+    <label for="campoTelefono" class="form-label">Número de Teléfono</label>
+    <input type="tel" class="form-control" id="campoTelefono" placeholder="+56 9 1234 5678">
+  </div>
 
-        <button class="btn btn-success">Enviar</button>
+  <div class="mb-3">
+    <label for="campoDireccion" class="form-label">Dirección</label>
+    <input type="text" class="form-control" id="campoDireccion" placeholder="Calle #123, Ciudad">
+  </div>
 
+  <div class="mb-3">
+    <label for="campoInfo" class="form-label">Información adicional de envío (Opcional)</label>
+    <textarea class="form-control" id="campoInfo" rows="3"></textarea>
+  </div>
 
-    </div>
+  <button class="btn btn-success" onclick="validarCamposVacios()">Enviar</button>
+</div>
+
+<script>
+  function validarCamposVacios() {
+    let email = document.getElementById("campoEmail").value.trim();
+    let telefono = document.getElementById("campoTelefono").value.trim();
+    let direccion = document.getElementById("campoDireccion").value.trim();
+
+    if (email === "" || telefono === "" || direccion === "") {
+      alert("Campos obligatorios vacíos");
+      return false;
+    }
+
+    alert("Formulario enviado correctamente");
+    return true;
+  }
+</script>
+
 
     <footer class=" fixed bottom bg-dark text-light text-left py-2">
         <p>&copy; 2023 Pastelería. Todos los derechos reservados.</p>
